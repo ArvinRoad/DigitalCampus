@@ -44,11 +44,12 @@
         function init(){
             /* FBXModel */
             FBXModel = new FBXLoader();
-            FBXModel.load('./resource/FBXModel/Demo.fbx',function (object){
+            FBXModel.load('./resource/FBXModel/Demo2.fbx',function (object){
                 object.traverse(function (child){
                     if (child.isMesh){
                         child.shininess = 5;
                         //child.textureLoader.load('');
+                        //child.texture.color(0xFF2288);
                         child.castShadow = true;
                         child.receiveShadow = true;
                     }
